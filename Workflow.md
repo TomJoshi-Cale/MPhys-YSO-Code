@@ -27,11 +27,13 @@ which is an alias command for
 do
     echo $d
     (cd $d && ls *.dat > files.txt && sf_text && rm files.txt)
-done```
+done
+```
 
 ## Copy in LPS median for each magnitude bin
 Navigate to the folder containing LPS bins:
-​```bash
+
+```bash
 LPS_FOLDER: $ for d in *_to_*
 do
     echo $d
@@ -54,10 +56,11 @@ SAMPLE_FOLDER: $ for d in *_to_*
 do
     echo $d
     (cd $d && python ~/Python/LPSSubtract.py *Median.dat)
-done```
+done
+```
 
 ## Create the Master Median
-​```bash
+```bash
 SAMPLE_FOLDER: $ python ~/Python/MasterMedian.py [TITLE]
 ```
 
